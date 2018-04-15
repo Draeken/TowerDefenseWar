@@ -1166,7 +1166,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1308184586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1183,8 +1183,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667457d8a19704351b5627429edc6920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 1160419985878500, guid: 91fb5bbb92b2f48658aab8af0a6ab943,
-    type: 2}
+  actionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2091504682}
+        m_MethodName: HandlePlayerAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: PlayerActionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!20 &1308184589
 Camera:
   m_ObjectHideFlags: 0
@@ -1202,7 +1216,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 55
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -1270,6 +1284,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2091504681}
+  - component: {fileID: 2091504682}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1290,3 +1305,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2091504682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091504680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f507d58a0364342a331b722ac39439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 1160419985878500, guid: 91fb5bbb92b2f48658aab8af0a6ab943,
+    type: 2}
