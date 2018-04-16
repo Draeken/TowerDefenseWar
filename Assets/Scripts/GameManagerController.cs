@@ -20,6 +20,14 @@ public class GameManagerController : MonoBehaviour
 
   public void HandlePlayerAction(PlayerAction action)
   {
-    Instantiate(towerPrefab, action.ray.GetPoint(49), Quaternion.identity);
+    RaycastHit2D hit = Physics2D.Raycast(action.ray.GetPoint(0), Vector2.zero, 60);
+    if (hit.collider != null)
+    {
+      Destroy(hit.collider.gameObject);
+    }
+    else
+    {
+      Instantiate(towerPrefab, action.ray.GetPoint(49), Quaternion.identity);
+    }
   }
 }
