@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Attackers
+    uniqueID: 1204137669
+    locked: 0
   - name: Towers
     uniqueID: 2442288673
     locked: 0
